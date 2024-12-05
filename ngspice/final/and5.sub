@@ -1,0 +1,5 @@
+.subckt and5 A B C D E out vdd gnd
+
+x2 A B C D g11 vdd gnd and4
+x4 g11 E out vdd gnd and
+.ends and5

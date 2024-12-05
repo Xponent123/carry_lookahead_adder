@@ -1,0 +1,8 @@
+.subckt png A B p g vdd gnd
+* x4 A Abar vdd gnd inv
+* x5 B bbar vdd gnd inv
+x1 A B p vdd gnd xor
+x2 A B g1 vdd gnd nand
+x3 g1 g vdd gnd inv
+
+.ends png

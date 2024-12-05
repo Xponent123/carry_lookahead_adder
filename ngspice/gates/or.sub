@@ -1,0 +1,7 @@
+.subckt or A B out vdd gnd
+
+
+x2 A B g1 vdd gnd nor
+x3 g1 out vdd gnd inv
+
+.ends or

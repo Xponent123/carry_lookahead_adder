@@ -1,0 +1,44 @@
+.subckt clagen p1 p2 p3 p4 g1 g2 g3 g4 C1 C2 C3 C4 C5 vdd gnd
+*******c2
+    x11 p1 c1 c212 vdd gnd and
+    x12 c212 g1 c2 vdd gnd or
+******c3
+    x1 p2 p1 p213 vdd gnd and
+    x3 p213 c1 pc13 vdd gnd and
+    x4 p2 g1 pg13 vdd gnd and
+    x2 pc13 pg13 ppg3 vdd gnd or
+    x5 ppg3 g2 c3 vdd gnd or
+******c4
+    x28 p2 p1 p214 vdd gnd and
+    x27 p214 c1 pc14 vdd gnd and
+    x21 pc14 p3 pc24 vdd gnd and
+
+    x29 p2 g1 pg14 vdd gnd and
+    x22 pg14 p3 pg24 vdd gnd and
+
+   x23 p3 g2 pg34 vdd gnd and
+
+   x24 pc24 pg24 out14 vdd gnd or
+   x25 pg34 g3 out24 vdd gnd or
+   x26 out14 out24 c4 vdd gnd or
+******c5
+    x38 p2 p1 p21 vdd gnd and
+    x37 p21 c1 pc1 vdd gnd and
+    x31 pc1 p3 pc2 vdd gnd and
+    x40 pc2 p4 pc3 vdd gnd and
+
+    x39 p2 g1 pg1 vdd gnd and
+    x32 pg1 p3 pg2 vdd gnd and
+    x41 pg2 p4 pg3 vdd gnd and
+
+    x33 p3 g2 pg31 vdd gnd and
+    x42 p4 pg31 pg4 vdd gnd and
+
+    x43 p4 g3 out4 vdd gnd and
+
+    x34 pc3 pg3 out5 vdd gnd or
+    x35 pg4 out4 out6 vdd gnd or
+    x36 out5 out6 out7 vdd gnd or
+    x44 out7 g4 c5 vdd gnd or
+
+.ends clagen

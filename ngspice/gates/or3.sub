@@ -1,0 +1,8 @@
+
+.subckt or3 A B C out vdd gnd
+
+
+x2 A B g1 vdd gnd or
+x3 g1 C out vdd gnd or
+
+.ends or3

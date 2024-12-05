@@ -1,0 +1,8 @@
+.subckt sum p1 p2 p3 p4 c1 c2 c3 c4 s1 s2 s3 s4 vdd gnd
+
+x6 C1 p1 s1 vdd gnd xor
+x7 c2 p2 s2 vdd gnd xor
+x8 C3 p3 s3 vdd gnd xor
+x9 c4 p4 s4 vdd gnd xor
+
+.ends sum
